@@ -33,8 +33,8 @@ jobs:
         run: go version    
      # Runs a single command using the runners shell   
       - name: Run a one-line script
-        # run: textql -header -sql "text from sample_data" data/
-        run: textql -version
+        run: textql -header -sql "text from sample_data" data
+        # run: textql -version
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
