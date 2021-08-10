@@ -27,9 +27,10 @@ jobs:
 
       - name: Install Release Dependencies
         run: sudo apt-get install textql
-    # Runs a single command using the runners shell   
       - name: sqlite
         run: sqlite3 --version
+      - name: go 
+        run: go version    
      # Runs a single command using the runners shell   
       - name: Run a one-line script
         run: sudo textql -header -sql "text from sample_data" data/
