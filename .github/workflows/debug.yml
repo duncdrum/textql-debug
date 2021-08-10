@@ -29,10 +29,10 @@ jobs:
         run: sudo apt-get install textql
      # Runs a single command using the runners shell   
       - name: Run a one-line script
-        run: textql -version
+        run: textql -header -sql "text from sample_data" data/
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          textql -header -sql "text from sample_data" data/ 
+          textql -header -sql "num from sample_data" data/ 
